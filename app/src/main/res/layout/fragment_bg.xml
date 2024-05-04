@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/ll_select_paper_code_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_factory"
+            android:layout_marginBottom="6dp"/>
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spin_test_paper_manufacturer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_test_code"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="10dp"/>
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spin_test_paper_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_measure_bg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/start_measure"
+        android:textSize="18sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_bg_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/blood_sugar_result_"
+        style="@style/common_text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_select_paper_code_container"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <TextView
+        android:id="@+id/tv_bg_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/waiting_for_calibration"
+        style="@style/common_text_color"
+        app:layout_constraintBottom_toTopOf="@+id/bt_measure_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bg_result" />
+
+    <TextView
+        android:id="@+id/tv_glucose_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Glucose sum: --"
+        style="@style/common_text_color"
+        app:layout_constraintStart_toStartOf="@+id/tv_bg_result"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bg_result" />
+
+    <TextView
+        android:id="@+id/tv_bg_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Bg count: --"
+        style="@style/common_text_color"
+        app:layout_constraintStart_toStartOf="@+id/tv_glucose_sum"
+        app:layout_constraintTop_toBottomOf="@+id/tv_glucose_sum" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
